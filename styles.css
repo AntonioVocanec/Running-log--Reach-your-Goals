@@ -1,0 +1,51 @@
+/* styles.css */
+h1 {
+  text-align: center;
+}
+body 
+ {
+  background-color: hsla(0, 100%, 50%, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  .tab-container {
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .tab-buttons {
+    display: flex;
+    background-color: #000000;
+  }
+  
+  .tab-button {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    background-color: #8a8a8a;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tab-button.active {
+    background-color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .tab-button:hover {
+    background-color: #ffffff;
+  }
+  
+  .tab-content {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }

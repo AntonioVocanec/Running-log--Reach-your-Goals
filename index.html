@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Tabs</title>
+    <style>
+      label {
+        display: block;
+        margin-bottom: 8px; /* Optional spacing between labels */
+      }
+      input {
+        margin-bottom: 16px; /* Optional spacing between inputs */
+      }
+    </style>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Running log, Reach your Goals</h1>
+    <div class="tab-container">
+      <!-- Tab buttons -->
+      <div class="tab-buttons">
+        <button class="tab-button active" data-tab="tab1">Run Log</button>
+        <button class="tab-button" data-tab="tab2">Metrics</button>
+        <button class="tab-button" data-tab="tab3">Weekly</button>
+      </div>
+
+      <!-- Tab content -->
+      <div class="tab-content active" id="tab1">
+        <p>This is where you’ll input your daily run data.</p>
+        <form action="/save" method="post">
+          <label for="d">Distance</label>
+          <input type="text" id="d" name="distance" placeholder="Distance.." />
+
+          <label for="HR">Heart Rate</label>
+          <input
+            type="text"
+            id="HR"
+            name="heartrate"
+            placeholder="HeartRate.."
+          />
+
+          <label for="cadance">Cadance</label>
+          <input
+            type="text"
+            id="cadance"
+            name="Cadance"
+            placeholder="Cadance.."
+          />
+
+          <label for="time">Time</label>
+          <input type="text" id="time" name="Time" placeholder="00:00:00" />
+
+          <label for="RE">Relative Effortry</label>
+          <select id="RE" name="RelativeEffort">
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+          </select>
+
+          <label for="Comments">Comments</label>
+          <textarea
+            id="subject"
+            name="subject"
+            placeholder="How did run go.."
+            style="height: 200px"
+          ></textarea>
+          <input type="submit" value="Save" />
+        </form>
+      </div>
+      <div class="tab-content" id="tab2">
+        <p>A section for tracking long-term trends across various metrics.</p>
+      </div>
+      <div class="tab-content" id="tab3">
+        <p>A place for you to review your week.</p>
+      </div>
+    </div>
+
+    <script src="runlog.js"></script>
+  </body>
+</html>
