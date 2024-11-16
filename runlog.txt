@@ -1,0 +1,2 @@
+Distance: 6568, Heart Rate: 565, Cadence: undefined
+Distance: 15, Heart Rate: 158, Cadence: undefined
