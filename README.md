@@ -21,7 +21,7 @@ Ensure that you have Node.js installed on your machine. Installing Node.js also 
 
 # Install Dependencies
 Navigate to the project folder and install the required Node.js modules:
-- npm install express body-parser
+- npm install
 
 # Start the Server
 Run the following command to start the server:
