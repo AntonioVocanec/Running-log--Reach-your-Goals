@@ -1,7 +1,23 @@
-
-Distance: undefined, Heart Rate: undefined, Cadence: undefined
-Distance: undefined, Heart Rate: undefined, Cadence: undefined
-Distance: undefined, Heart Rate: undefined, Cadence: undefined
-Distance: undefined, Heart Rate: undefined, Cadence: undefined
-Distance: 12, Heart Rate: 168, Cadence: 160, Time: 30:25:10, Relative Effort: Hard, Comments: ass
-Distance: 10, Heart Rate: 158, Cadence: 160, Time: 20, Relative Effort: Medium, Comments: 261sas
+Distance: 212, Heart Rate: 212, Cadence: 12, Time: 1212, Relative Effort: Easy, Comments: 21212
+Distance: 2121, Heart Rate: 2121, Cadence: 2121, Time: 21212, Relative Effort: Easy, Comments: 1212212
+Distance: 212, Heart Rate: 12121, Cadence: 2121, Time: 21212, Relative Effort: Easy, Comments: 2122212
+Distance: 21, Heart Rate: 212, Cadence: 212, Time: 121, Relative Effort: Easy, Comments: 12121
+Distance: 15, Heart Rate: 66, Cadence: 22, Time: 88, Relative Effort: Easy, Comments: 8888
+Distance: 15, Heart Rate: 66, Cadence: 22, Time: 88, Relative Effort: Easy, Comments: 8888
+Distance: 15, Heart Rate: 66, Cadence: 22, Time: 88, Relative Effort: Easy, Comments: 8888
+Distance: 212, Heart Rate: 2121, Cadence: 2121, Time: 212, Relative Effort: Easy, Comments: 121212
+Distance: 212, Heart Rate: 121, Cadence: 212, Time: 121, Relative Effort: Easy, Comments: 21212
+Distance: 212, Heart Rate: 12, Cadence: 212, Time: 212, Relative Effort: Easy, Comments: 1212
+Distance: 212, Heart Rate: 212, Cadence: 2121, Time: 21212, Relative Effort: Easy, Comments: 12121
+Distance: 212, Heart Rate: 212, Cadence: 2121, Time: 21212, Relative Effort: Easy, Comments: 12121
+Distance: 2121, Heart Rate: 12121, Cadence: 2121, Time: 21212, Relative Effort: Easy, Comments: 2121212
+Distance: 212, Heart Rate: 2121, Cadence: 212, Time: 121, Relative Effort: Easy, Comments: 2121
+Distance: 21, Heart Rate: 21, Cadence: 21, Time: 121, Relative Effort: Easy, Comments: 1212
+Distance: 21, Heart Rate: 21, Cadence: 12212, Time: 212121, Relative Effort: Easy, Comments: 21212
+Distance: 2121, Heart Rate: 21212121, Cadence: 2121212, Time: 21212121, Relative Effort: Easy, Comments: 1212121212121
+Distance: 2121, Heart Rate: 21212121, Cadence: 2121212, Time: 21212121, Relative Effort: Easy, Comments: 1212121212121
+Distance: , Heart Rate: , Cadence: , Time: , Relative Effort: Easy, Comments: 
+Distance: 2121, Heart Rate: 21212, Cadence: 1212, Time: 121212, Relative Effort: Easy, Comments: 1212212
+Distance: 21121, Heart Rate: 212, Cadence: 1212, Time: 121, Relative Effort: Easy, Comments: 212121
+Distance: wqwq, Heart Rate: wqw, Cadence: w121, Time: 2121, Relative Effort: Easy, Comments: 2121212
+Distance: 122, Heart Rate: 212, Cadence: 121, Time: 2121, Relative Effort: Easy, Comments: 2121212

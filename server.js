@@ -2,18 +2,13 @@ const express = require("express");
 const fs = require("fs");
 const app = express();
 
-// Middleware to parse JSON data
+// Middleware to parse JSON and serve static files
 app.use(express.json());
-
-// Serve static files
 app.use(express.static(__dirname));
 
-// Handle the POST request to save data
-app.post("/save", (req, res) => {
-  const { distance, heartrate, cadance, time, relativeEffort, comments } =
-    req.body;
-
-  // Validate that all required fields are present
+// Utility function for validation
+const validateData = (data) => {
+  const { distance, heartrate, cadance, time, relativeEffort, comments } = data;
   if (
     !distance ||
     !heartrate ||
@@ -22,21 +17,31 @@ app.post("/save", (req, res) => {
     !relativeEffort ||
     !comments
   ) {
-    return res.status(400).send("All fields are required.");
+    return "All fields are required.";
+  }
+  return null;
+};
+
+// POST route to save data
+app.post("/save", (req, res) => {
+  // Validate the request data
+  const validationError = validateData(req.body);
+  if (validationError) {
+    console.warn("Validation error:", validationError);
+    return res.status(400).send(validationError); // Client-side error
   }
 
-  // Format data for saving
-  const data = `Distance: ${distance}, Heart Rate: ${heartrate}, Cadence: ${cadance}, Time: ${time}, Relative Effort: ${relativeEffort}, Comments: ${comments}\n`;
+  // Format the data for saving
+  const data = `Distance: ${req.body.distance}, Heart Rate: ${req.body.heartrate}, Cadence: ${req.body.cadance}, Time: ${req.body.time}, Relative Effort: ${req.body.relativeEffort}, Comments: ${req.body.comments}\n`;
 
-  // Append to runlog.txt
+  // Append data to runlog.txt
   fs.appendFile("runlog.txt", data, (err) => {
     if (err) {
       console.error("Error writing to file:", err);
-      return res.status(500).send("Error saving data.");
+      return res.status(500).send("Error saving data."); // Server-side error
     }
-
-    console.log("Data saved:", data.trim());
-    res.send("Data saved successfully!");
+    console.log("Data saved successfully:", data.trim());
+    res.status(200).send("Data saved successfully!"); // Success response
   });
 });
 
