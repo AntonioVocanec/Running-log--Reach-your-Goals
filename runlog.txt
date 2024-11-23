@@ -1,2 +1,7 @@
-Distance: 6568, Heart Rate: 565, Cadence: undefined
-Distance: 15, Heart Rate: 158, Cadence: undefined
+
+Distance: undefined, Heart Rate: undefined, Cadence: undefined
+Distance: undefined, Heart Rate: undefined, Cadence: undefined
+Distance: undefined, Heart Rate: undefined, Cadence: undefined
+Distance: undefined, Heart Rate: undefined, Cadence: undefined
+Distance: 12, Heart Rate: 168, Cadence: 160, Time: 30:25:10, Relative Effort: Hard, Comments: ass
+Distance: 10, Heart Rate: 158, Cadence: 160, Time: 20, Relative Effort: Medium, Comments: 261sas

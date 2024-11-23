@@ -14,6 +14,11 @@
       }
     </style>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
   </head>
   <body>
     <h1>Running log, Reach your Goals</h1>
@@ -28,7 +33,7 @@
       <!-- Tab content -->
       <div class="tab-content active" id="tab1">
         <p>This is where you’ll input your daily run data.</p>
-        <form action="/save" method="post">
+        <form id="runForm">
           <label for="d">Distance</label>
           <input type="text" id="d" name="distance" placeholder="Distance.." />
 
@@ -37,22 +42,22 @@
             type="text"
             id="HR"
             name="heartrate"
-            placeholder="HeartRate.."
+            placeholder="Heart Rate.."
           />
 
-          <label for="cadance">Cadance</label>
+          <label for="cadance">Cadence</label>
           <input
             type="text"
             id="cadance"
-            name="Cadance"
-            placeholder="Cadance.."
+            name="cadance"
+            placeholder="Cadence.."
           />
 
           <label for="time">Time</label>
-          <input type="text" id="time" name="Time" placeholder="00:00:00" />
+          <input type="text" id="time" name="time" placeholder="00:00:00" />
 
-          <label for="RE">Relative Effortry</label>
-          <select id="RE" name="RelativeEffort">
+          <label for="RE">Relative Effort</label>
+          <select id="RE" name="relativeEffort">
             <option value="Easy">Easy</option>
             <option value="Medium">Medium</option>
             <option value="Hard">Hard</option>
@@ -61,11 +66,13 @@
           <label for="Comments">Comments</label>
           <textarea
             id="subject"
-            name="subject"
-            placeholder="How did run go.."
+            name="comments"
+            placeholder="How did the run go.."
             style="height: 200px"
           ></textarea>
-          <input type="submit" value="Save" />
+
+          <button id="saveButton" type="button">Save</button>
+          <button id="toastButton" type="button">Toast</button>
         </form>
       </div>
       <div class="tab-content" id="tab2">
@@ -77,5 +84,6 @@
     </div>
 
     <script src="runlog.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   </body>
 </html>
