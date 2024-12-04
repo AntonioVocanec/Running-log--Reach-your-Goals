@@ -67,19 +67,49 @@
       </div>
       <div class="tab-content" id="tab2">
         <p>A section for tracking long-term trends across various metrics.</p>
+        <section id="charts">
+          <!-- Distance Chart -->
+          <div>
+            <h2>Distance Chart</h2>
+            <canvas id="metricsChartDistance"></canvas>
+          </div>
+          
+          <!-- Heart Rate Chart -->
+          <div>
+            <h2>Heart Rate Chart</h2>
+            <canvas id="metricsChartHeartRate"></canvas>
+          </div>
+
+          <!-- Cadance Chart -->
+          <div>
+            <h2>Cadance Chart</h2>
+            <canvas id="metricsChartCadence"></canvas>
+          </div>
+
+          <!-- Cadance Pace -->
+          <div>
+            <h2>Pace Chart</h2>
+            <canvas id="metricsChartPace"></canvas>
+          </div>
+        </section>
       </div>
       <div class="tab-content" id="tab3">
         <p>A place for you to review your week.</p>
       </div>
       <div class = "tab-content" id="tab4">
         <p>Simple settings menu</p>
-        <button id="modeSwitcher" type="checkbox">Switch to Dark Mode</button>
+        <button id="modeSwitcher" type="button">Switch to Dark Mode</button>
+        <button id="ereaseData" type="button">Erease Data</button>
       </div>
     </div>
 
     <script src="runlog.js"></script>
+    <script src="tabs-switch-logic.js"></script>
+    <script src="theme-switch.js"></script>
+    <script src="metrics.js"></script>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/toastify-js"
     ></script>
+    <script src="node_modules/chart.js/dist/chart.umd.js"></script>
 </html>

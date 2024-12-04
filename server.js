@@ -1,10 +1,22 @@
 const express = require("express");
 const fs = require("fs");
+const path = require("path");
 const app = express();
 
 // Middleware to parse JSON and serve static files
 app.use(express.json());
 app.use(express.static(__dirname));
+
+app.get("/getData", (req, res) => {
+  const filePath = path.join(__dirname, "runlog.txt");
+  fs.readFile(filePath, "utf8", (err, data) => {
+    if (err) {
+      console.error("Error reading file:", err.message);
+      return res.status(500).send(`Error reading file: ${err.message}`);
+    }
+    res.send(data);
+  });
+});
 
 // Utility function for validation
 const validateData = (data) => {

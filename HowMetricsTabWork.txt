@@ -1,0 +1,63 @@
+The fetchData Function
+
+function fetchData() {
+  fetch("/getData")
+    .then((response) => response.text())
+    .then((data) => {
+      console.log("Fetched data:", data);
+      const distances = extractDistances(data);
+      console.log("Extracted distances:", distances);
+      createChart(distances);
+    })
+    .catch((err) => {
+      console.error("Error fetching data:", err);
+    });
+}
+How It Works:
+fetch("/getData"): Sends a GET request to the server endpoint /getData.
+
+The server should respond with the contents of runlog.txt as plain text. For example:
+makefile
+Copy code
+Distance: 5
+Distance: 7
+Distance: 10
+.then((response) => response.text()): Converts the raw response (a Response object) into plain text.
+
+.then((data) => { ... }): Once the text is ready, the function processes it:
+
+Logs the fetched data for debugging purposes.
+Passes the data to extractDistances() to isolate the actual distances (numeric values).
+Calls createChart() with the extracted distances to draw the chart.
+.catch((err) => { ... }): Handles errors, like if the server is down or the file doesn’t exist. Logs the error for debugging.
+
+
+
+Extracting Distances with extractDistances
+javascript
+Copy code
+function extractDistances(text) {
+  const regex = /Distance:\s*(\d+)/g; // Matches lines like "Distance: 10"
+  const distances = [];
+  let match;
+
+  while ((match = regex.exec(text)) !== null) {
+    distances.push(parseInt(match[1], 10)); // Convert matched numbers to integers
+  }
+
+  return distances; // Return an array of distances
+}
+How It Works:
+Regex Explanation: /Distance:\s*(\d+)/g
+
+Distance:: Matches the literal string "Distance:".
+\s*: Matches zero or more spaces after "Distance:".
+(\d+): Captures one or more digits (the actual distance).
+g: Global flag to find all matches in the text.
+Process:
+
+regex.exec(text): Searches the text for the next match. If found, it returns an array where:
+match[0] is the full match (e.g., "Distance: 10").
+match[1] is the captured number (e.g., "10").
+parseInt(match[1], 10): Converts the captured number into an integer (base 10) and adds it to the distances array.
+Loop Until No Matches: The while loop continues calling regex.exec until there are no more matches, effectively building an array of distances (e.g., [5, 7, 10]).

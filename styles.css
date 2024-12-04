@@ -108,3 +108,20 @@ body.dark-mode {
     transform: translateY(0);
   }
 }
+
+#charts {
+  display: flex;
+  flex-direction: column; /* Stack the charts vertically */
+  gap: 10px; /* Add spacing between charts */
+  max-width: 800px; /* Limit the overall width of the charts */
+  margin: 0 auto; /* Center the charts on the page */
+}
+
+#charts div {
+  text-align: center;
+}
+
+canvas {
+  max-width: 100%; /* Ensure canvas scales responsively */
+  height: auto;
+}
