@@ -15,7 +15,25 @@ tabButtons.forEach((button) => {
 
     // Initialize chart in tab2 when it's shown
     if (tabId === "tab2" && !activeChart) {
-      fetchData(); // Fetch the data when tab2 is shown
+      fetch("/checkFileEmpty")
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.isEmpty) {
+            Toastify({
+              text: data.message,
+              duration: 3000,
+              gravity: "top",
+              position: "right",
+              style: {
+                background: "linear-gradient(to right, #cc5500, #e3735e)",
+              },
+            }).showToast();
+          } else {
+            fetchData(); // Fetch the data when tab2 is shown
+          }
+        })
+        .catch((err) => console.error("Error checking file:", err));
+      return null;
     }
   });
 });
