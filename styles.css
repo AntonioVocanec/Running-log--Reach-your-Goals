@@ -1,26 +1,51 @@
 /* Proper spacing*/
 label {
   display: block;
-  margin-bottom: 2px; /* Optional spacing between labels */
+  margin-bottom: 5px; /* Optional spacing between labels */
 }
 
 input {
-  margin-bottom: 2px; /* Optional spacing between inputs */
-}
-button {
-  display: block;
-  margin-bottom: 2px; /* Optional spacing between buttons */
+  margin-bottom: 5px; /* Optional spacing between inputs */
 }
 h1 {
   text-align: center;
 }
 
+button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 5px; /* Adds a slight curve for a polished look */
+  padding: 10px 10px;
+  margin: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.5); /* Slightly darkens the button */
+  color: var(--text-color);
+  transform: translateY(5px); /* Lift effect for feedback */
+  opacity: 1; /* Slight transparency for elegance */
+}
+
+button:active {
+  transform: translateY(5px); /* Slight press effect */
+}
+
+button:focus {
+  outline: 2px solid var(--text-color); /* Visible focus state */
+  outline-offset: 2px;
+}
+
+
 /* ThemeSwitch */
 :root {
   --bg-color: #E5E4E2; /*  Platinum White */
   --text-color: #282828; /*  Graphite Black */
-  --button-bg-color: #282828; /*  Graphite Black */
-  --button-text-color: #E5E4E2; /*  Platinum White */
+  --button-bg-color: #C0C0C0; /*  ***** */
+  --button-text-color: #282828; /*  Platinum White */
 }
 body 
  {
@@ -31,33 +56,22 @@ body
   }
   .container {
     text-align: center;
-    margin-top: 50px;
-}
-
-button {
-    background-color: var(--button-bg-color);
-    color: var(--button-text-color);
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-button:hover {
-    opacity: 0.8;
+    margin-top: 10px;
 }
 
 body.dark-mode {
     --bg-color: #282828;  /*  Graphite Black */
     --text-color: #E5E4E2; /*  Platinum White */
-    --button-bg-color: #E5E4E2; /*  Platinum White */
-    --button-text-color: #282828; /*  Graphite Black */
+    --button-bg-color: #505050; /*  Platinum White */
+    --button-text-color: #E5E4E2; /*  Graphite Black */
 }
 
 /* Animated Tabs */
 .tab-container {
-  width: 60%;
-  margin: 0 auto;
+  width: 80%;
+  height: auto;
+  padding: 10px 10px;
+  margin: auto;
   border: 1px solid #000000;
   border-radius: 5px;
   overflow: hidden;
@@ -69,7 +83,8 @@ body.dark-mode {
 
 .tab-button {
   flex: 1;
-  padding: 10px;
+  padding: 10px 10px;
+  margin: 10px;
   text-align: center;
   border: none;
   cursor: pointer;
@@ -77,20 +92,22 @@ body.dark-mode {
 }
 
 .tab-button.active {
+  padding: 10px 10px;
+  margin: 10px;
   font-weight: bold;
-  transform: scale(1.1); /* Slightly enlarge the active button */
+  transform: scale(1.05); /* Slightly enlarge the active button */
   transition: transform 0.4s ease;
 }
 
 .tab-button:hover {
-  padding-right: 25px; /* Slide effect on hover */
-  transform: translateY(-2px); /* Lift the button slightly */
+  margin: 10px;
+  padding: 10px 10px; /* Slide effect on hover */
+  transform: translateY(-1px); /* Lift the button slightly */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for hover */
 }
 
 .tab-content {
   display: none;
-  padding: 20px;
   animation: fadeIn 0.2s ease; /* Animation for content fade-in */
 }
 
@@ -101,7 +118,7 @@ body.dark-mode {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(50px); /* Content appears to slide up */
+    transform: translateY(25px); /* Content appears to slide up */
   }
   to {
     opacity: 1;
