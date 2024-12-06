@@ -57,6 +57,47 @@ app.post("/save", (req, res) => {
   });
 });
 
+// Function to erase the contents of the runlog.txt file
+function eraseRunLogFile(req, res) {
+  const filePath = "./runlog.txt"; // Ensure this path is correct
+
+  // Clear the file's content by writing an empty string
+  fs.writeFile(filePath, "", (err) => {
+    if (err) {
+      console.error("Error erasing runlog.txt:", err);
+      res.status(500).send({ success: false, message: "Failed to erase data" });
+    } else {
+      console.log("runlog.txt cleared successfully");
+      res
+        .status(200)
+        .send({ success: true, message: "Data erased successfully" });
+    }
+  });
+}
+
+// Route to check if runlog.txt is empty
+app.get("/checkFileEmpty", (req, res) => {
+  const filePath = "./runlog.txt"; // Ensure this path is correct
+
+  if (!fs.existsSync(filePath)) {
+    return res.json({ isEmpty: true, message: "File does not exist." });
+  }
+
+  const stats = fs.statSync(filePath);
+  if (stats.size === 0) {
+    return res.json({
+      isEmpty: true,
+      message: "No data available!",
+    });
+  } else {
+    //message: "File is not empty."
+    return res.json({ isEmpty: false });
+  }
+});
+
+// Attach the erase function to a POST route
+app.post("/eraseRunLog", eraseRunLogFile);
+
 // Start the server
 const PORT = 3000;
 app.listen(PORT, () => {
