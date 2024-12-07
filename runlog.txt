@@ -1,1 +1,7 @@
 Distance: 5, Heart Rate: 148, Cadence: 164, Time: 5, Relative Effort: Easy, Comments: feelt great
+Distance: 7, Heart Rate: 168, Cadence: 174, Time: 5, Relative Effort: Easy, Comments: feelt great
+Distance: 6, Heart Rate: 158, Cadence: 164, Time: 8, Relative Effort: Easy, Comments: feelt great
+Distance: 4, Heart Rate: 138, Cadence: 184, Time: 5, Relative Effort: Easy, Comments: feelt great
+Distance: 3, Heart Rate: 128, Cadence: 184, Time: 5, Relative Effort: Easy, Comments: feelt great
+Distance: 10, Heart Rate: 178, Cadence: 174, Time: 6, Relative Effort: Easy, Comments: feelt great
+Distance: 8, Heart Rate: 168, Cadence: 164, Time: 5, Relative Effort: Easy, Comments: feelt great
