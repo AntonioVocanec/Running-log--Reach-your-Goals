@@ -1,6 +1,5 @@
 // Handle the fields to accept numbers only
 const numberFields = ["#HR", "#d", "#cadance", "#time"];
-
 // Loop through each field and apply the "numbers-only" validation
 numberFields.forEach((fieldId) => {
   const inputField = document.querySelector(fieldId);
@@ -11,6 +10,27 @@ numberFields.forEach((fieldId) => {
       event.preventDefault(); // Prevent non-number characters
     }
   };
+});
+
+const paceInput = document.getElementById("time");
+
+paceInput.addEventListener("input", (event) => {
+  let value = event.target.value;
+
+  // Remove any invalid characters
+  value = value.replace(/[^0-9:]/g, "");
+
+  // Automatically add a colon if the first part is a single digit
+  if (value.length === 1 && !value.includes(":")) {
+    value += ":";
+  }
+
+  // Limit seconds to two digits and prevent values > 60
+  const [minutes, seconds] = value.split(":");
+  if (seconds && parseInt(seconds) > 59) {
+    value = `${minutes}:59`;
+  }
+  event.target.value = value;
 });
 
 saveButton.addEventListener("click", (e) => {
