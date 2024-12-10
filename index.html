@@ -27,7 +27,7 @@
         <p>This is where you’ll input your daily run data.</p>
         <form id="runForm">
           <label for="d">Distance</label>
-          <input type="text" id="d" name="distance" placeholder="Distance.." />
+          <input type="text" id="d" name="distance" placeholder="e.g., 5.05" title="Enter Distance in Km format"/>
 
           <label for="HR">Heart Rate</label>
           <input
@@ -46,8 +46,7 @@
           />
 
           <label for="time">Pace</label>
-          <input type="text" id="time" name="time" placeholder="00:00" />
-
+          <input type="text" id="time" name="time" placeholder="00:00, Auto-Inserting Colon " title="Enter time in m:ss format, e.g., 5:30"/>
           <label for="RE">Relative Effort</label>
           <select id="RE" name="relativeEffort">
             <option value="Easy">Easy</option>
