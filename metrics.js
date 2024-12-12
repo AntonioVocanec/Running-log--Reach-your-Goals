@@ -176,7 +176,7 @@ function createDistanceChart(distances) {
               const comment = comments[index] || "No comment"; // Access the corresponding comment
               const RE = efforts[index] || "No data"; // Access the corresponding Effort
               const distance = context.raw; // Access the distance value
-              return `Distance: ${distance} km | Relative Effort: ${RE} | \nComment ${comment}`; // Custom tooltip text
+              return `Distance: ${distance} km | Relative Effort: ${RE} | \nComment: ${comment}`; // Custom tooltip text
             },
           },
         },
