@@ -108,7 +108,7 @@ saveButton.addEventListener("click", (e) => {
   const heartrate = document.getElementById("HR").value;
   const cadance = document.getElementById("cadance").value;
   const time = document.getElementById("time").value;
-  const relativeEffort = document.getElementById("RE").value;
+  const effort = document.getElementById("RE").value;
   const comments = document.getElementById("subject").value;
 
   // Validate inputs
@@ -132,7 +132,7 @@ saveButton.addEventListener("click", (e) => {
     heartrate,
     cadance,
     time,
-    relativeEffort,
+    effort,
     comments,
   };
 

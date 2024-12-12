@@ -18,7 +18,7 @@
       <div class="tab-buttons">
         <button class="tab-button active" data-tab="tab1">Run Log</button>
         <button class="tab-button" data-tab="tab2">Metrics</button>
-        <button class="tab-button" data-tab="tab3">Weekly</button>
+        <button class="tab-button" data-tab="tab3">Summary</button>
         <button class="tab-button" data-tab="tab4">Settings</button>
       </div>
 
@@ -48,7 +48,7 @@
           <label for="time">Pace</label>
           <input type="text" id="time" name="time" placeholder="00:00, Auto-Inserting Colon " title="Enter time in m:ss format, e.g., 5:30"/>
           <label for="RE">Relative Effort</label>
-          <select id="RE" name="relativeEffort">
+          <select id="RE" name="effort">
             <option value="Easy">Easy</option>
             <option value="Medium">Medium</option>
             <option value="Hard">Hard</option>
@@ -66,6 +66,7 @@
       </div>
       <div class="tab-content" id="tab2">
         <p>A section for tracking long-term trends across various metrics.</p>
+        <p>Hover on each run to display additional informations!</p>
         <section id="charts">
           <!-- Distance Chart -->
           <div>
@@ -93,7 +94,7 @@
         </section>
       </div>
       <div class="tab-content" id="tab3">
-        <p>A place for you to review your week.</p>
+        <p>A place that keeps the focus on the core data Summary.</p>
       </div>
       <div class = "tab-content" id="tab4">
         <p>Simple settings menu</p>

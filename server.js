@@ -20,15 +20,8 @@ app.get("/getData", (req, res) => {
 
 // Utility function for validation
 const validateData = (data) => {
-  const { distance, heartrate, cadance, time, relativeEffort, comments } = data;
-  if (
-    !distance ||
-    !heartrate ||
-    !cadance ||
-    !time ||
-    !relativeEffort ||
-    !comments
-  ) {
+  const { distance, heartrate, cadance, time, effort, comments } = data;
+  if (!distance || !heartrate || !cadance || !time || !effort || !comments) {
     return "All fields are required.";
   }
   return null;
